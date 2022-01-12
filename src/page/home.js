@@ -9,9 +9,6 @@ const HomePage = {
             <div class="p-3">
                 ${News.render()}
             </div>
-            <div class="p-3">
-                ${News.render()}
-            </div>
         `;
     },
 };
