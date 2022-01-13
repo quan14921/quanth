@@ -1,8 +1,13 @@
 import Navigo from "navigo";
 import HomePage from "./page/home";
-import AboutPage from "./page/about";
 import ProductPage from "./page/product";
 import DetailNewsPage from "./page/detailNews";
+import dashboardPage from "./admin/dashboard";
+import signinPage from "./page/signin";
+import signupPage from "./page/signup";
+import AdminnewsPage from "./admin/news/adminnews";
+import addnewsPage from "./admin/news/add";
+import editnewsPage from "./admin/news/edit";
 
 const router = new Navigo("/", { linksSelector: "a" });
 const print = (content) => {
@@ -13,13 +18,28 @@ router.on({
     "/": () => {
         print(HomePage.render());
     },
-    "/about": () => {
-      print(AboutPage.render());
+    "/dashboard": () => {
+      print(dashboardPage.render());
     },
     "/product": () => {
       print(ProductPage.render());
     },
-    "/news/id": (value) => {
+    "/news": () => {
+      print(AdminnewsPage.render());
+    },
+    "/add": () => {
+      print(addnewsPage.render());
+    },
+    "/edit": () => {
+      print(editnewsPage.render());
+    },
+    "/signin": () => {
+      print(signinPage.render());
+    },
+    "/signup": () => {
+      print(signupPage.render());
+    },
+    "/news/:id": (value) => {
       console.log(value.data.id);
       print(DetailNewsPage.render(value.data.id));
   },
