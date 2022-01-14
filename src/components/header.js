@@ -10,7 +10,6 @@ const header = {
           <ul class="p-2 flex">
             <li><a class="text-white p-2" href="/">trang chủ</a></li>
             <li><a class="text-white p-2" href="/product">Bài viết</a></li>
-            <li><a class="text-white p-2" href="">dashboard</a></li>
             <li><a class="text-white p-2" href="/signin">đăng nhập</a></li>
             <div class="absolute right-5">
               <input type="text">
