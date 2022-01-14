@@ -5,9 +5,10 @@ import DetailNewsPage from "./page/detailNews";
 import dashboardPage from "./admin/dashboard";
 import signinPage from "./page/signin";
 import signupPage from "./page/signup";
-import AdminnewsPage from "./admin/news/adminnews";
+import AdminnewsPage from "./admin/news/indexx";
 import addnewsPage from "./admin/news/add";
 import editnewsPage from "./admin/news/edit";
+import AdminspPage from "./admin/news/sanpham";
 
 const router = new Navigo("/", { linksSelector: "a" });
 const print = (content) => {
@@ -18,16 +19,19 @@ router.on({
     "/": () => {
         print(HomePage.render());
     },
-    "/dashboard": () => {
+    "/admin/dashboard": () => {
       print(dashboardPage.render());
     },
     "/product": () => {
       print(ProductPage.render());
     },
-    "/news": () => {
+    "/admin/news": () => {
       print(AdminnewsPage.render());
     },
-    "/add": () => {
+    "/admin/products": () => {
+      print(AdminspPage.render());
+    },
+    "/admin/news/add": () => {
       print(addnewsPage.render());
     },
     "/edit": () => {
