@@ -1,4 +1,7 @@
+import axios from "axios";
+import { add } from "../../api/post";
 import NavAdmin from "../../components/navadmin";
+
 const addnewsPage = {
     render() {
         return /* html */`
@@ -38,8 +41,8 @@ const addnewsPage = {
                     id="title-post"
                     class="border border-black"
                     placeholder="Title"
-              > <br />
-              <input type="text"
+              > <br />>
+              <input type="file"
                     id="img-post"
                     class="border border-black"
                     placeholder="Image"
@@ -57,16 +60,39 @@ const addnewsPage = {
     },
     afterRender() {
       const formAdd = document.querySelector("#form-add");
-      formAdd.addEventListener("submit", (e) => {
-        e.preventDefault();
-        console.log("submited");
-        add({
-          title: "Bai viet moi them",
-          img: "http://placeimg.com/640/480/cats",
-          desc: "Mô tả bài viết",
-        });
+      const imgPost = document.querySelector('#img-post');
   
+      imgPost.addEventListener('change', async (e) => {
+        const file = e.target.files[0];
+        const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/dmizie6oo/image/upload"
+  
+        const formData = new FormData();
+  
+        formData.append('file', file);
+        formData.append('upload_preset', "jkbdphzy");
+  
+      // call api cloudinary
+      
+        const response = await axios.post(CLOUDINARY_API, formData, {
+          headers: {
+            "Content-Type": "application/form-data"
+          }
+        });
+        console.log(response.data.url);
+  
+  
+        formAdd.addEventListener("submit", (e) => {
+          e.preventDefault();
+          add({
+            title: document.querySelector('#title-post').value,
+            img: response.data.url,
+            desc:document.querySelector('#desc-post').value,
+          });
+    
+        });
       });
+  
+      
     },
 };
 export default addnewsPage;
