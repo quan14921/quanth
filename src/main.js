@@ -34,7 +34,7 @@ router.on({
     "/admin/news/add": () => {
       print(addnewsPage.render());
     },
-    "/edit": () => {
+    "/admin/news/edit": () => {
       print(editnewsPage.render());
     },
     "/signin": () => {
@@ -47,6 +47,7 @@ router.on({
       console.log(value.data.id);
       print(DetailNewsPage.render(value.data.id));
   },
+
 });
 
 router.notFound(() => print("Not Found Page"));
