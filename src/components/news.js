@@ -1,22 +1,48 @@
-import data from "../data";
-
+import style from "./news.module.css";
+import axios from 'axios';
+import { getAll } from "../api/post";
 const News = {
-    render() {
+    async render() {
+        const { data } = await getAll()
         return /* html */`
-        <h1 class="font-extrabold m-2 text-2xl truncate">TIN TỨC HỌC TẬP</h1>
-        <div class="news">
-            <div class="grid grid-cols-3 grid-flow-row gap-2">
-                    ${data.map((post) => `
-                            <div class="border-black border-2 p-6">
-                                        <a href="/news/${post.id}">
-                                        <div class="bg-center bg-no-repeat m-4 h-48 w-66" style="background-image: url('${post.img}'); background-size: 20rem 16rem"></div>
-                                        </a>
-                                    <h3 class="text-xl"><a href="/news/${post.id}">${post.title}</a></h3>
-                                    <p class="text-sm">${post.desc}</p>
-                                </div>
-                        `).join("")}
-            </div>
-        </div>`;
+            <h2 class="font-semibold text-2xl text-blue-900 my-4 uppercase">Tin tức học lập</h2>
+            <div>
+                <div class="grid grid-cols-3 gap-8">
+                        ${data.map((post) => `
+                                    <div class="${style["news-item"]} border p-4">
+                                        <div class="news-img">
+                                            <a href="/news/${post.id}">
+                                                <img src="${post.img}" />
+                                            </a>
+                                        </div>
+                                        <h3 class="my-3"><a href="/news/${post.id}" class="font-semibold text-orange-500">${post.title}</a></h3>
+                                        <p class="text-sm text-gray-600">${post.desc}</p>
+                                    </div>
+                            `).join("")}
+                </div>
+            </div>`;
+
+
+        
+    // return fetch("http://localhost:3001/posts")
+    // .then((response) => response.json())
+    // .then((data) => /* html */`
+    //         <h2 class="font-semibold text-2xl text-blue-900 my-4 uppercase">Tin tức học lập</h2>
+    //         <div class=${style.newsDemo}>
+    //             <div class="grid grid-cols-3 gap-8">
+    //                     ${data.map((post) => `
+    //                                 <div class="${style["news-item"]} border p-4">
+    //                                     <div class="news-img">
+    //                                         <a href="/news/${post.id}">
+    //                                             <img src="${post.img}" />
+    //                                         </a>
+    //                                     </div>
+    //                                     <h3 class="my-3"><a href="/news/${post.id}" class="font-semibold text-orange-500">${post.title}</a></h3>
+    //                                     <p class="text-sm text-gray-600">${post.desc}</p>
+    //                                 </div>
+    //                         `).join("")}
+    //             </div>
+    //         </div>`);
     },
 };
 export default News;

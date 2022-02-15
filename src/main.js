@@ -11,8 +11,8 @@ import editnewsPage from "./admin/news/edit";
 import AdminspPage from "./admin/news/sanpham";
 
 const router = new Navigo("/", { linksSelector: "a" });
-const print = (content) => {
-    document.getElementById("cont").innerHTML = content;
+const print = async (content) => {
+    document.getElementById("cont").innerHTML = await content;
 };
 
 router.on({

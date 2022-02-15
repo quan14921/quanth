@@ -83,6 +83,7 @@ const addnewsPage = {
   
         formAdd.addEventListener("submit", (e) => {
           e.preventDefault();
+          console.log('submit');
           add({
             title: document.querySelector('#title-post').value,
             img: response.data.url,
