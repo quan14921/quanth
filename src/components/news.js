@@ -5,7 +5,8 @@ const News = {
     async render() {
         const { data } = await getAll()
         return /* html */`
-            <h2 class="font-semibold text-2xl text-blue-900 my-4 uppercase">Tin tức học lập</h2>
+        <div class="small-container">
+        <h2 class="title text-4xl">Sản Phẩm Nổi Bật</h2>
             <div>
                 <div class="grid grid-cols-3 gap-8">
                         ${data.map((post) => `
@@ -16,33 +17,15 @@ const News = {
                                             </a>
                                         </div>
                                         <h3 class="my-3"><a href="/news/${post.id}" class="font-semibold text-orange-500">${post.title}</a></h3>
-                                        <p class="text-sm text-gray-600">${post.desc}</p>
+                                        <div class="w-64 m-2 truncate">
+                                        <h3>${post.price}</h3>
+                                        <span>${post.desc}</span>
+                                        </div>
                                     </div>
                             `).join("")}
                 </div>
+                </div>   
             </div>`;
-
-
-        
-    // return fetch("http://localhost:3001/posts")
-    // .then((response) => response.json())
-    // .then((data) => /* html */`
-    //         <h2 class="font-semibold text-2xl text-blue-900 my-4 uppercase">Tin tức học lập</h2>
-    //         <div class=${style.newsDemo}>
-    //             <div class="grid grid-cols-3 gap-8">
-    //                     ${data.map((post) => `
-    //                                 <div class="${style["news-item"]} border p-4">
-    //                                     <div class="news-img">
-    //                                         <a href="/news/${post.id}">
-    //                                             <img src="${post.img}" />
-    //                                         </a>
-    //                                     </div>
-    //                                     <h3 class="my-3"><a href="/news/${post.id}" class="font-semibold text-orange-500">${post.title}</a></h3>
-    //                                     <p class="text-sm text-gray-600">${post.desc}</p>
-    //                                 </div>
-    //                         `).join("")}
-    //             </div>
-    //         </div>`);
     },
 };
 export default News;

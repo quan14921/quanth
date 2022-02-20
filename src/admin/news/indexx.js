@@ -1,18 +1,21 @@
-import data from "../../data";
+import { getAll, remove } from "../../api/post";
 import NavAdmin from "../../components/navadmin";
-const AdminnewsPage = {
-    render() {
+import { reRender } from "../../utils/rerender";
+
+const AdminNews = {
+    async render() {
+        const { data } = await getAll();
         return /* html */`
-
+        <div class="min-h-full">
         ${NavAdmin.render()}
-
+      
         <header class="bg-white shadow">
           <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
             <!-- This example requires Tailwind CSS v2.0+ -->
               <div class="lg:flex lg:items-center lg:justify-between">
                 <div class="flex-1 min-w-0">
                   <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
-                    Quản lý bài viết
+                    Quản lý Sản Phẩm
                   </h2>
                 </div>
                 <div class="mt-5 flex lg:mt-0 lg:ml-4">
@@ -33,68 +36,83 @@ const AdminnewsPage = {
           <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
             <!-- Replace with your content -->
             <div class="px-4 py-6 sm:px-0">
-              <div class="border-4 ">
-              
-                  <div class="flex flex-col">
-                  <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <!-- This example requires Tailwind CSS v2.0+ -->
+                <div class="flex flex-col">
+                <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                      <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                         <table class="min-w-full divide-y divide-gray-200">
-                          <thead class="bg-gray-50">
+                            <thead class="bg-gray-50">
                             <tr>
-                              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                id
-                              </th>
-                              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Title
-                              </th>
-                              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Content
-                              </th>
-                              <th scope="col" class="relative px-6 py-3">
-                                <span class="sr-only">Edit</span>
-                              </th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-White-500 uppercase tracking-wider">
+                                STT
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-White-500 uppercase tracking-wider">
+                                Ảnh
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-White-500 uppercase tracking-wider">
+                                Tên Sản Phẩm
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-White-500 uppercase tracking-wider">
+                                giá Sản Phẩm
+                                </th>
+                                <th scope="col" class="relative px-6 py-3">
+                                    <span class="sr-only">Edit</span>
+                                </th>
                             </tr>
-                          </thead>
-                          <tbody class="bg-white divide-y divide-gray-200">
-                            ${data.map((post) => `
-                            <tr>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                              <div class="flex items-center">
-                                <div class="ml-4">
-                                  <div class="text-sm font-medium text-gray-900">
-                                  ${post.id}
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                              <div class="text-sm text-gray-900">${post.title}</div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                            ${post.desc}
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                              <a href="/edit" class="text-indigo-600 hover:text-indigo-900">Edit</a>
-                            </td>
-                          </tr>
-                                  `).join("")}
-                
-                            <!-- More people... -->
-                          </tbody>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                            ${data.map((post, index) => `
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        ${index + 1}
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <img src="${post.img}" width="50"/>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                    ${post.title}
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                    ${post.price}
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="/admin/news/${post.id}/edit" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                        <button data-id="${post.id}" class="btn btn-delete bg-indigo-600 hover:bg-indigo-900 px-4 py-3 text-white rounded-full">Delete</button>
+                                    </td>
+                                </tr>
+                            `).join("")}
+                            </tbody>
                         </table>
-                      </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              
-              </div>
+                    </div>
+                    </div>
             </div>
             <!-- /End replace -->
           </div>
         </main>
+      </div>
         
         `;
     },
+    afterRender() {
+        // Lấy toàn bộ button có class .btn
+        const btns = document.querySelectorAll(".btn");
+        btns.forEach((buttonElement) => {
+            // lấy id button thông qua thuộc tính data-id
+            const id = buttonElement.dataset.id;
+            buttonElement.addEventListener("click", () => {
+                // Xoa phan tu trong mang dua tren ID
+                const confirm = window.confirm("Bạn có muốn xóa hay không?");
+                if(confirm){
+                  // call api xóa
+                  remove(id)
+                    .then(() => console.log('Bạn đã xóa thành công'))
+                    .then(() => reRender(AdminNews, "#cont"));
+                }
+            });
+        });
+    },
 };
-export default AdminnewsPage;
+export default AdminNews;

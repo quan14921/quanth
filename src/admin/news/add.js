@@ -1,10 +1,12 @@
 import axios from "axios";
 import { add } from "../../api/post";
 import NavAdmin from "../../components/navadmin";
+import $ from 'jquery';
+import validate from 'jquery-validation';
 
 const addnewsPage = {
-    render() {
-        return /* html */`
+  render() {
+    return /* html */`
         <div class="min-h-full">
         ${NavAdmin.render()}
       
@@ -14,7 +16,7 @@ const addnewsPage = {
               <div class="lg:flex lg:items-center lg:justify-between">
                 <div class="flex-1 min-w-0">
                   <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
-                    Thêm mới bài viết
+                    Thêm mới Sản Phẩm
                   </h2>
                 </div>
                 <div class="mt-5 flex lg:mt-0 lg:ml-4">
@@ -36,18 +38,27 @@ const addnewsPage = {
             <!-- Replace with your content -->
             <div class="px-4 py-6 sm:px-0">
               <div class="border-4 border-dashed border-gray-200 rounded-lg h-96">
-              <form action="" id="form-add">
-              <input type="text"
+            <form action="" id="form-add">
+            Tên Sản Phẩm <input type="text"
                     id="title-post"
                     class="border border-black"
-                    placeholder="Title"
-              > <br />>
-              <input type="file"
+                    placeholder="Tên Sản Phẩm"
+                    name="title-post"
+              > <br />
+            Ảnh Sản Phẩm  <input type="file"
                     id="img-post"
                     class="border border-black"
                     placeholder="Image"
+                    name="img-post"
               > <br />
-              <textarea name="" id="desc-post" cols="30" rows="10" class="border border-black"></textarea><br />
+              <img src="http://2.bp.blogspot.com/-MowVHfLkoZU/VhgIRyPbIoI/AAAAAAAATtI/fHk-j_MYUBs/s640/placeholder-image.jpg" id="img-preview"/>
+              Giá Sản Phẩm <input type="number"
+                    id="price-post"
+                    class="border border-black"
+                    placeholder="Giá Sản Phẩm"
+                    name="price-post"
+              > <br />
+              <textarea name="title-post" id="desc-post" cols="30" rows="10" class="border border-black"></textarea><br />
               <button class="bg-blue-500 p-4 text-white">Thêm</button>
             </form>
               </div>
@@ -57,43 +68,74 @@ const addnewsPage = {
         </main>
       </div>
         `;
-    },
-    afterRender() {
-      const formAdd = document.querySelector("#form-add");
-      const imgPost = document.querySelector('#img-post');
-  
-      imgPost.addEventListener('change', async (e) => {
-        const file = e.target.files[0];
-        const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/dmizie6oo/image/upload"
-  
-        const formData = new FormData();
-  
-        formData.append('file', file);
-        formData.append('upload_preset', "jkbdphzy");
-  
-      // call api cloudinary
+  },
+  afterRender() {
+    const formAdd = $("#form-add");
+    const imgPost = document.querySelector('#img-post');
+    const imgPreview = document.querySelector('#img-preview');
+
+    const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/ecommercer2021/image/upload"
+    const CLOUDINARY_PRESET = "jkbdphzy";
+
+    let imgLink = "";
+    
+    // preview image when upload
+    imgPost.addEventListener('change', async (e) => {
+      imgPreview.src = URL.createObjectURL(e.target.files[0]);
+    });
+
+    formAdd.validate({
+      rules: {
+        "title-post":{
+					required: true,
+					minlength: 5
+				},
+        "img-post":{
+					required: true
+				},
+        "price-post":{
+					required: true
+				},
+      },
+      messages: {
+        "title-post": {
+					required: "Không được để trống trường này!",
+					minlength: "Bạn cần nhập ít nhất 5 ký tự "
+				},
+        "img-post": {
+					required: "Không được để trống trường này!"
+				},
+        "price-post": {
+					required: "Không được để trống trường này!"
+				},
+      },
+      submitHandler:  function() {
+        async function addProduct(){
+          const file = imgPost.files[0];
+          if(file){
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('upload_preset', CLOUDINARY_PRESET);
       
-        const response = await axios.post(CLOUDINARY_API, formData, {
-          headers: {
-            "Content-Type": "application/form-data"
+            // call api cloudinary
+          
+            const { data } = await axios.post(CLOUDINARY_API, formData, {
+              headers: {
+                "Content-Type": "application/form-data"
+              }
+            });
+            imgLink = data.url;
           }
-        });
-        console.log(response.data.url);
-  
-  
-        formAdd.addEventListener("submit", (e) => {
-          e.preventDefault();
-          console.log('submit');
           add({
             title: document.querySelector('#title-post').value,
-            img: response.data.url,
+            img: imgLink ? imgLink : "",
+            price: document.querySelector('#price-post').value,
             desc:document.querySelector('#desc-post').value,
           });
-    
-        });
-      });
-  
-      
-    },
+        }
+        addProduct();
+      }
+    });
+  },
 };
 export default addnewsPage;

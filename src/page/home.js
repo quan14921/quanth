@@ -6,9 +6,6 @@ const HomePage = {
    async render() {
          return /* html */`
             ${header.render()}
-            <div class="banner">
-            <div class="bg-center bg-no-repeat h-80 w-120" style="background-image: url('https://lh5.googleusercontent.com/-_xgJsWdyra8/VRjyAvFyIwI/AAAAAAAAMpg/cGPCV0caiQY/w1038-h331-no/Banner%2BWeb%2Bcuoc%2Bthi%2BAnh%2BKhoanhkhactuoi17%2B2.jpg'); background-size: 100rem 20rem"></div>
-            </div>
             <div class="p-3">
                 ${ await News.render()}
             </div>
