@@ -2,94 +2,113 @@
   "posts": [
     {
       "id": 1,
-      "title": "Áo Thời Trang 1",
+      "name": "Áo Thời Trang 1",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645338677/zy2rgt9xrqubypruqtix.jpg",
       "price": "900000",
-      "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \\\" Must have \\\" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn."
+      "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \\\" Must have \\\" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn.",
+      "categoryId": 1
     },
     {
       "id": 2,
-      "title": "Áo Thời Trang 2",
+      "name": "Áo Thời Trang 2",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645338695/gshvtjddyhf2arll1mxp.jpg",
       "price": "900000",
-      "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \\\" Must have \\\" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn."
+      "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \\\" Must have \\\" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn.",
+      "categoryId": 1
     },
     {
       "id": 3,
-      "title": "Áo Thời Trang ",
+      "name": "Áo Thời Trang ",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645339303/uaojkcjlxcnm1jxuk7dt.jpg",
       "price": "900000",
-      "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \\\" Must have \\\" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn."
+      "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \\\" Must have \\\" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn.",
+      "categoryId": 1
     },
     {
       "id": 4,
-      "title": "Quần Thời Trang ",
+      "name": "Quần Thời Trang ",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645339389/odh3puypw75y09oczllr.jpg",
       "price": "900000",
-      "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \\\" Must have \\\" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn."
+      "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \\\" Must have \\\" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn.",
+      "categoryId": 2
     },
     {
       "id": 5,
-      "title": "Quần Thời Trang 1",
+      "name": "Quần Thời Trang 1",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645339330/tdo3czcqpnh5dliva2wj.jpg",
       "price": "900000",
-      "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \\\" Must have \\\" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn."
+      "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \\\" Must have \\\" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn.",
+      "categoryId": 2
     },
     {
       "id": 6,
-      "title": "Quần Thời Trang 1",
+      "name": "Quần Thời Trang 1",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645339415/mj5cu0zgsoezyz1wnkvh.jpg",
       "price": "900000",
-      "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \\\" Must have \\\" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn."
+      "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \\\" Must have \\\" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn.",
+      "categoryId": 2
     },
     {
       "id": 7,
-      "title": "Quần Thời Trang 1",
+      "name": "Quần Thời Trang 1",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645338646/vvforbt4zzewhmix0ccs.jpg",
       "price": "900000",
-      "desc": ""
+      "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \" Must have \" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn.",
+      "categoryId": 2
     },
     {
-      "title": "Quần Thời Trang 2",
+      "name": "Quần Thời Trang 2",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645336807/u6ovred3ihtvingtpeq3.jpg",
       "price": "900000",
       "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \" Must have \" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn.",
-      "id": 8
+      "id": 8,
+      "categoryId": 2
     },
     {
       "id": 9,
-      "title": "Áo Thời Trang 2",
+      "name": "Áo Thời Trang 2",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645339469/kwx2fomnkxu1fe02ypwm.jpg",
       "price": "900000",
-      "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \\\" Must have \\\" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn."
+      "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \\\" Must have \\\" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn.",
+      "categoryId": 1
     },
     {
       "id": 11,
-      "title": "Quần Thời Trang 2",
+      "name": "Quần Thời Trang 2",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645339486/lx49ujq5brym595hwqnk.jpg",
       "price": "900000",
-      "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \\\" Must have \\\" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn."
+      "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \\\" Must have \\\" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn.",
+      "categoryId": 2
     },
     {
-      "title": "Áo Thời Trang 12",
+      "name": "Áo Thời Trang 12",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645337661/gumxxnz7fjrpywsqx2oz.jpg",
       "price": "100000",
       "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \" Must have \" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn.",
-      "id": 12
+      "id": 12,
+      "categoryId": 1
     },
     {
-      "title": "Áo Thời Trang 124",
+      "name": "Áo Thời Trang 124",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645337695/db7nekhv4ymjhjz5hkrj.jpg",
       "price": "300000",
       "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \" Must have \" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn.",
-      "id": 13
+      "id": 13,
+      "categoryId": 1
     }
   ],
-  "products": [],
-  "category": [
+  "categorys": [
     {
-      "name-cate": "sản phẩm 1",
+      "name": "Áo",
       "id": 1
+    },
+    {
+      "name": "Quần",
+      "id": 2
+    },
+    {
+      "name": "Giầy",
+      "id": 3
     }
   ],
   "users": [
@@ -104,6 +123,12 @@
       "password": "$2a$10$oDszw7K7m.qOHDfXHslxlOSN78FSFW86zo2ylhM4HXiS.wOFcnx8y",
       "username": "quanthph14921",
       "id": 2
+    },
+    {
+      "email": "tquan@gmail.com",
+      "password": "$2a$10$c0mcHEyqu8RIev9vIk8ZRejUJw.fY//Yp1LDnmJOUvOPXUZABW51C",
+      "username": "quanthph32432",
+      "id": 3
     }
   ]
 }

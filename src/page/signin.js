@@ -1,14 +1,34 @@
-
+import footer from "../components/footer";
+import header2 from "../components/header2";
 import { signin } from "../api/user";
 
 const Signin = {
     render(){
         return /*html*/`
-            <form id="formSignin">
-                <input type="email" placeholder="email" id="email" />
-                <input type="password" placeholder="password" id="password" />
-                <button>Đăng nhập</button>
-            </form>
+        ${header2.render()}
+        <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="img/image1.png" width="100%">
+                </div>
+
+                <div class="col-2">
+                    <div class="form-container">
+                        <h3>Đăng Nhập</h3>
+                        <form id="formSignin">
+                            <input type="email" placeholder="Email" id="email">
+                            <input type="password" placeholder="Password" id="password">
+                            <button type="submit" class="btn">Đăng nhập</button>
+                            <p>bạn có muốn <a class="text-lg p-1" href="/signup">Đăng ký</a>??</p>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    ${footer.render()}
         `
     },
     afterRender(){
@@ -31,6 +51,7 @@ const Signin = {
                 console.log(error.response.data);
             }
         });
+        header2.afterRender();
     }
 }
 export default Signin;

@@ -36,7 +36,7 @@ const AdminEditNews = {
             <!-- Replace with your content -->
             <form action="" id="form-edit">
               <input type="text"
-                    id="title-post"
+                    id="name-post"
                     class="border border-black"
                     placeholder="Title"
                     value="${data.title}"
@@ -102,7 +102,7 @@ const AdminEditNews = {
         }
         update({
             id,
-            title: document.querySelector('#title-post').value,
+            title: document.querySelector('#name-pos').value,
             img: imgLink ? imgLink : imgPreview.src,
             price: document.querySelector('#price-post').value,
             desc:document.querySelector('#desc-post').value,

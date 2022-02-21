@@ -8,7 +8,8 @@ import signupPage from "./page/signup";
 import AdminnewsPage from "./admin/news/indexx";
 import addnewsPage from "./admin/news/add";
 import AdminEditNews from "./admin/news/edit";
-import AdminuserPage from "./admin/user/indexx";
+import AdminuserPage from "./admin/category/indexx";
+import CartPage from "./page/cart";
 
 const router = new Navigo("/", { linksSelector: "a" });
 const print = async (content, id) => {
@@ -29,7 +30,7 @@ router.on({
     "/admin/news": () => {
       print(AdminnewsPage);
     },
-    "/admin/user": () => {
+    "/admin/category": () => {
       print(AdminuserPage);
     },
     "/admin/news/add": () => {
@@ -43,6 +44,7 @@ router.on({
       print(signupPage);
     },
     "/news/:id": ({ data }) => print(DetailNewsPage, data.id),
+    "/cart": () => print(CartPage),
 
 });
 

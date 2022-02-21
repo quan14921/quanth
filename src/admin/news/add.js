@@ -3,13 +3,15 @@ import { add } from "../../api/post";
 import NavAdmin from "../../components/navadmin";
 import $ from 'jquery';
 import validate from 'jquery-validation';
+import { getAll } from "../../api/category";
 
 const addnewsPage = {
-  render() {
+  async render() {
+    const { cate } = await getAll()
     return /* html */`
         <div class="min-h-full">
         ${NavAdmin.render()}
-      
+        
         <header class="bg-white shadow">
           <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
             <!-- This example requires Tailwind CSS v2.0+ -->
@@ -40,7 +42,7 @@ const addnewsPage = {
               <div class="border-4 border-dashed border-gray-200 rounded-lg h-96">
             <form action="" id="form-add">
             Tên Sản Phẩm <input type="text"
-                    id="title-post"
+                    id="name-post"
                     class="border border-black"
                     placeholder="Tên Sản Phẩm"
                     name="title-post"
@@ -58,6 +60,8 @@ const addnewsPage = {
                     placeholder="Giá Sản Phẩm"
                     name="price-post"
               > <br />
+              Loại sản Phẩm <select name="categoryId" class="border border-black" id="list">
+              </select> <br>
               <textarea name="title-post" id="desc-post" cols="30" rows="10" class="border border-black"></textarea><br />
               <button class="bg-blue-500 p-4 text-white">Thêm</button>
             </form>
@@ -68,6 +72,8 @@ const addnewsPage = {
         </main>
       </div>
         `;
+        
+        
   },
   afterRender() {
     const formAdd = $("#form-add");
@@ -86,7 +92,7 @@ const addnewsPage = {
 
     formAdd.validate({
       rules: {
-        "title-post":{
+        "name-post":{
 					required: true,
 					minlength: 5
 				},
@@ -98,7 +104,7 @@ const addnewsPage = {
 				},
       },
       messages: {
-        "title-post": {
+        "name-post": {
 					required: "Không được để trống trường này!",
 					minlength: "Bạn cần nhập ít nhất 5 ký tự "
 				},
@@ -127,7 +133,7 @@ const addnewsPage = {
             imgLink = data.url;
           }
           add({
-            title: document.querySelector('#title-post').value,
+            title: document.querySelector('#name-post').value,
             img: imgLink ? imgLink : "",
             price: document.querySelector('#price-post').value,
             desc:document.querySelector('#desc-post').value,

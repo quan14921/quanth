@@ -6,11 +6,15 @@ const HomePage = {
    async render() {
          return /* html */`
             ${header.render()}
+
             <div class="p-3">
                 ${ await News.render()}
             </div>
             ${footer.render()}
         `;
     },
+    afterRender(){
+        header.afterRender();
+    }
 };
 export default HomePage;

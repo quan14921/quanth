@@ -71,7 +71,7 @@ const AdminNews = {
                                         <img src="${post.img}" width="50"/>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                    ${post.title}
+                                    ${post.name}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                     ${post.price}

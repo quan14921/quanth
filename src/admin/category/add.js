@@ -1,5 +1,5 @@
 import axios from "axios";
-import { add } from "../../api/post";
+import { add } from "../../api/category";
 import NavAdmin from "../../components/navadmin";
 
 const addcategoryPage = {
