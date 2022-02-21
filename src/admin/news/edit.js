@@ -1,5 +1,5 @@
 import { get, update } from "../../api/post";
-import NavAdmin from "../../components/NavAdmin";
+import NavAdmin from "../../components/navadmin";
 import axios from 'axios';
 
 const AdminEditNews = {
