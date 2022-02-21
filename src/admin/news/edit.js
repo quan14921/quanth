@@ -39,7 +39,7 @@ const AdminEditNews = {
                     id="name-post"
                     class="border border-black"
                     placeholder="Title"
-                    value="${data.title}"
+                    value="${data.name}"
               > <br />
               <input type="file"
                     id="img-post"
