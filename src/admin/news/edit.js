@@ -38,7 +38,7 @@ const AdminEditNews = {
               <input type="text"
                     id="name-post"
                     class="border border-black"
-                    placeholder="Title"
+                    placeholder="name"
                     value="${data.name}"
               > <br />
               <input type="file"
@@ -102,12 +102,12 @@ const AdminEditNews = {
         }
         update({
             id,
-            title: document.querySelector('#name-pos').value,
+            name: document.querySelector('#name-post').value,
             img: imgLink ? imgLink : imgPreview.src,
             price: document.querySelector('#price-post').value,
             desc:document.querySelector('#desc-post').value,
         });
-
+        document.location.href="/admin/news";
     });
 
     

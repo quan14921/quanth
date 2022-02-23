@@ -28,7 +28,7 @@ const CartPage = {
                     ${cart.length > 0 ? cart.map(item => `
                         <tr>
                             <td>${item.name}</td>
-                            <td>${item.price}</td>
+                            <td>${item.price * item.quantity}</td>
                             <td>
                                 <input type="number" value="${item.quantity}" class="border border-gray-400 p-3" />
                                 <button data-id="${item.id}" class="btn btn-increase inline-block p-3 bg-green-500 text-white">Tăng</button>
@@ -38,9 +38,11 @@ const CartPage = {
                             <button data-id="${item.id}" class="btn btn-remove inline-block p-3 bg-red-500 text-white">Xóa</button>
                             </td>
                         </tr>
-                    `).join("") : `
+                        
+                        `).join("") : `
                         <tr>
-                            <td colspan="4">No record</td>
+                            <td colspan="4">Tổng Tiền</td>
+                            <td></td>
                         </tr>
                     `}
                     

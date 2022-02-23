@@ -41,13 +41,7 @@ const addcategoryPage = {
                     id="title-post"
                     class="border border-black"
                     placeholder="Title"
-              > <br />>
-              <input type="file"
-                    id="img-post"
-                    class="border border-black"
-                    placeholder="Image"
               > <br />
-              <textarea name="" id="desc-post" cols="30" rows="10" class="border border-black"></textarea><br />
               <button class="bg-blue-500 p-4 text-white">Thêm</button>
             </form>
               </div>
@@ -60,37 +54,15 @@ const addcategoryPage = {
     },
     afterRender() {
       const formAdd = document.querySelector("#form-add");
-      const imgPost = document.querySelector('#img-post');
-  
-      imgPost.addEventListener('change', async (e) => {
-        const file = e.target.files[0];
-        const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/dmizie6oo/image/upload"
-  
-        const formData = new FormData();
-  
-        formData.append('file', file);
-        formData.append('upload_preset', "jkbdphzy");
-  
-      // call api cloudinary
-      
-        const response = await axios.post(CLOUDINARY_API, formData, {
-          headers: {
-            "Content-Type": "application/form-data"
-          }
-        });
-        console.log(response.data.url);
-  
-  
+
         formAdd.addEventListener("submit", (e) => {
           e.preventDefault();
           console.log('submit');
           add({
-            title: document.querySelector('#title-post').value,
-            desc:document.querySelector('#desc-post').value,
+            name: document.querySelector('#title-post').value,
           });
-    
+          document.location.href="/admin/category";
         });
-      });
   
       
     },

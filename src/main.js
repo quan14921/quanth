@@ -9,6 +9,7 @@ import AdminnewsPage from "./admin/news/indexx";
 import addnewsPage from "./admin/news/add";
 import AdminEditNews from "./admin/news/edit";
 import AdminuserPage from "./admin/category/indexx";
+import addcategoryPage from "./admin/category/add";
 import CartPage from "./page/cart";
 
 const router = new Navigo("/", { linksSelector: "a" });
@@ -36,6 +37,9 @@ router.on({
     "/admin/news/add": () => {
       print(addnewsPage);
     },
+    "/admin/category/add": () => {
+      print(addcategoryPage);
+    },
     "/admin/news/:id/edit": ({data}) => print(AdminEditNews, data.id),
     "/signin": () => {
       print(signinPage);
@@ -52,20 +56,3 @@ router.notFound(() => print("Not Found Page"));
 
 router.resolve();
 
-// class KhuanBanh {
-//     constructor(luongDuong, luongBot) {
-//         this.duong = luongDuong;
-//         this.bot = luongBot;
-//     }
-
-//     showInfo() {
-//         console.log(`
-//             Lượng đường: ${this.duong}
-//             Lượng Bột: ${this.bot}
-//         `);
-//     }
-// }
-
-// const banhDeo = new KhuanBanh(10, 20);
-// banhDeo.showInfo();
-// console.log(banhDeo.duong);

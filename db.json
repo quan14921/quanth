@@ -2,11 +2,10 @@
   "posts": [
     {
       "id": 1,
-      "name": "Áo Thời Trang 1",
+      "name": "Áo Thời Trang Nam 1",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645338677/zy2rgt9xrqubypruqtix.jpg",
       "price": "900000",
-      "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \\\" Must have \\\" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn.",
-      "categoryId": 1
+      "desc": "rshtsjy"
     },
     {
       "id": 2,
@@ -89,12 +88,18 @@
       "categoryId": 1
     },
     {
-      "name": "Áo Thời Trang 124",
+      "id": 13,
+      "name": "áo nam",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645337695/db7nekhv4ymjhjz5hkrj.jpg",
       "price": "300000",
-      "desc": "Ngày nay áo thun nam tay lỡ được coi là món đồ \" Must have \" trong tủ đồ của các tín đồ về thời trang. Càng ngày những chiếc áo thun nam tay lỡ unisex càng được chăm chút hơn về hình ảnh với nhiều mẫu mã và màu sắc đa dạng hơn và những thiết kế đặc sắc, bắt mắt hơn thậm chí còn bắt kịp nhiều trào lưu xu hướng đặc biệt là phong cách của đất nước kim chi - Hàn Quốc.\n2s Clothing thấu hiểu được những vấn đề này và sẽ liên tục cập nhật các mẫu áo thun nam tay lỡ unisex mới nhất giúp các bạn có thể có nhiều sự lựa chọn.",
-      "id": 13,
-      "categoryId": 1
+      "desc": "ehteh"
+    },
+    {
+      "id": 14,
+      "name": "Áo Nam Thời Trang 1",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645526214/ussxiorue0m94x9cpsmw.jpg",
+      "price": "98000000",
+      "desc": "ỵtejejyejujrj"
     }
   ],
   "categorys": [
@@ -109,6 +114,14 @@
     {
       "name": "Giầy",
       "id": 3
+    },
+    {
+      "name": "Dép",
+      "id": 5
+    },
+    {
+      "name": "áo nữ",
+      "id": 6
     }
   ],
   "users": [

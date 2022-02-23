@@ -133,15 +133,17 @@ const addnewsPage = {
             imgLink = data.url;
           }
           add({
-            title: document.querySelector('#name-post').value,
+            name: document.querySelector('#name-post').value,
             img: imgLink ? imgLink : "",
             price: document.querySelector('#price-post').value,
             desc:document.querySelector('#desc-post').value,
           });
+          document.location.href="/admin/news";
         }
         addProduct();
       }
     });
+    
   },
 };
 export default addnewsPage;
